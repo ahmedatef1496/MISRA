@@ -5,7 +5,6 @@
 | File                  | Link                                                                           
 | --------------------- | ------------------------------------------------------------------------------ |
 | MCU file                   | [.hex]()  |
-| documentation                 | [design]() |            | 
 | Simulation                    | [Simulation]() |
 | HW_Test Video                 | [Video]()|
 | sim_Test Video                 | [Video]()|
