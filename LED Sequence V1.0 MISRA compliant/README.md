@@ -11,7 +11,7 @@
 
 
 
-# MISRA rules Applied in this  DIO driver
+# MISRA Rules Applied in This  DIO Driver
 -Rule 14.7, requires that functions with variable-length argument lists should not be called.<br>
 -Rule 18.1, requires that all declarations should be at the top of the function or file scope.<br>
 -Rule 10.1, requires that all operands of logical and relational operators should have a Boolean type.<br>
