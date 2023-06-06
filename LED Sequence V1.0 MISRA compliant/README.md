@@ -4,7 +4,7 @@
 # Proiect_map
 | File                  | Link                                                                           
 | --------------------- | ------------------------------------------------------------------------------ |
-| MCU file                   | [SOS.hex]()  |
+| MCU file                   | [.hex]()  |
 | documentation                 | [design]() |            | 
 | Simulation                    | [Simulation]() |
 | HW_Test Video                 | [Video]()|
