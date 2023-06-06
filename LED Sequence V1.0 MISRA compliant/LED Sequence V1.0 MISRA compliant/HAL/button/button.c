@@ -11,7 +11,7 @@ en_buttonError_t BUTTON_init( DIO_Port_type port, u8 u8_PinNumber)
 	
 	if (u8_PinNumber <PIN_MAX && port<PORT_MAX)
 	{    
-				DIO_InitPin(port,u8_PinNumber,INPULL);
+				DIO_InitPin(port,u8_PinNumber,INFREE);
 				error = BUTTON_OK;
 	}
 	else

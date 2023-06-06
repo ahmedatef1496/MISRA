@@ -17,10 +17,10 @@ typedef enum EN_LED_ERROR_t
 	LED_ERROR
 }EN_LED_ERROR_t;
 
-	#define  LED1 0 
-	#define  LED2 1 
-	#define  LED3 2 
-	#define  LED4 3 
+	#define  LED1 4 
+	#define  LED2 5
+	#define  LED3 6 
+	#define  LED4 7 
 	
 	#define LEDS_Port PB
 

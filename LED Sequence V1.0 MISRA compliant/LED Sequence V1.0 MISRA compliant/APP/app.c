@@ -11,13 +11,14 @@
   void app_start_v1()
   {
 	  int led=0 ,flag =0;
-	  DIO_PinVoltage_type data=HIGH;
+	  DIO_PinVoltage_type data=LOW;
 	  while(1)
 	  {
 		  led=0;
 		  while (!flag)
-		  { BUTTON_read(PD,0,&data);
-			  if (!data)
+		  {
+			   BUTTON_read(PC,4,&data);
+			  if (data==HIGH)
 			  {
 				  if (led>3)
 				  {
@@ -33,8 +34,9 @@
 		  }
 		  led=3;
 		  while (flag)
-		  { BUTTON_read(PD,0,&data);
-			  if  (!data)
+		  { 
+			  BUTTON_read(PC,4,&data);
+			  if  (data==HIGH)
 			  {
 
 				  LED_off(LED4-led);
@@ -62,7 +64,7 @@
 	 LED_init(LED2);
 	 LED_init(LED3);
 	 LED_init(LED4);
-	 BUTTON_init(PD,0);
+	 BUTTON_init(PC,4);
 
 
 	  	
