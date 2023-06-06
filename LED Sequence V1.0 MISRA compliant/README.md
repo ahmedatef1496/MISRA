@@ -12,12 +12,12 @@
 
 
 # MISRA rules Applied in this  DIO driver
-Rule 14.7, requires that functions with variable-length argument lists should not be called.
-Rule 18.1, requires that all declarations should be at the top of the function or file scope.
-Rule 10.1, requires that all operands of logical and relational operators should have a Boolean type.
-Rule 17.4, prohibits the use of the comma operator.
-Rule 13.2, which requires that all conditional statements should have a Boolean expression as the controlling expression.
-Rule 12.2, which requires that all switch statements should have a default case.
+-Rule 14.7, requires that functions with variable-length argument lists should not be called.
+-Rule 18.1, requires that all declarations should be at the top of the function or file scope.
+-Rule 10.1, requires that all operands of logical and relational operators should have a Boolean type.
+-Rule 17.4, prohibits the use of the comma operator.
+-Rule 13.2, which requires that all conditional statements should have a Boolean expression as the controlling expression.
+-Rule 12.2, which requires that all switch statements should have a default case.
 
 
 ## Simulation Schematic
