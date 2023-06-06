@@ -12,6 +12,6 @@
 ## Simulation Schematic
 
 <p align="center">
-  <img width="600" height="400" src="https://github.com/ahmedatef1496/MISRA/blob/main/LED%20Sequence%20V1.0%20MISRA%20compliant/sim/sim.PNG">
+  <img width="800" height="400" src="https://github.com/ahmedatef1496/MISRA/blob/main/LED%20Sequence%20V1.0%20MISRA%20compliant/sim/sim.PNG">
 </p>
 
