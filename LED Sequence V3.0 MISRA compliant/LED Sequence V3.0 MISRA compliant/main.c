@@ -7,13 +7,12 @@
 
 #include "APP/app.h"
 
+
+
 int main(void)
 { 
-	DIO_InitPin(PB,0,OUTPUT);
-	DIO_WritePin(PB,0,HIGH);
-    /* Replace with your application code */
-    while (1) 
-    {
-    }
+	
+    app_init();
+    app_start_v3();
 }
 

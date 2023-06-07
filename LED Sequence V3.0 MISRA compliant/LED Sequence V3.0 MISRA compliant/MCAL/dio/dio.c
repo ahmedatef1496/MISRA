@@ -10,7 +10,7 @@
     en_dioError_t  DIO_InitPin  (DIO_Port_type port, u8 u8_PinNumber, DIO_PinStatus_type status)	
     {
 	    en_dioError_t error = DIO_OK;
-	    if (u8_PinNumber < PIN_MAX == TRUE)
+	    if (u8_PinNumber < PIN_MAX)
 	    {
 
 		    switch(status)
@@ -20,7 +20,7 @@
 			    {
 				    case PA:
 				    SET_BIT( DDRA,u8_PinNumber);
-				    CLR_BIT(PORTA,u8_PinNumber);
+				    CLR_BIT( PORTA,u8_PinNumber);
 				    break;
 				    case PB:
 				    SET_BIT( DDRB,u8_PinNumber);
