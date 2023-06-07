@@ -20,7 +20,7 @@ static void (*Timer2_OVF_Fptr) (void)=NULLPTR;
  // used in TIME_0_DELAY_MS
 static double g_ovfNum  ; 
 static double g_time ;
-
+static u32  g_overflowsCount  = 0;
 /**********************************************************/
 /*                       Timer-0                          */
 /**********************************************************/
@@ -95,10 +95,20 @@ void TIMER0_OV_SetCallBack(void(*LocalFptr)(void))
 }
 /*Timer-0 ISR functions*/
 ISR(TIMER0_OVF_vect)
-{   
+{  
+	 static u32 counter = 0;
+		if(counter == g_overflowsCount)
+		{
+			counter=0; 
+			
 	if(Timer0_OVF_Fptr!=NULLPTR)
 	{
 		Timer0_OVF_Fptr();
+	}
+		}
+	else
+	{
+		counter++;
 	}
 }
 /*Timer-0 Interrup*/
@@ -128,7 +138,7 @@ EN_timerError_t timer_delay(u16 Delay)
 	double CPU_F = F_CPU;
 	double oneTickTime = (8 / CPU_F ) * 1000; // in ms
 	double maxDelay = oneTickTime * 256; // in ms
-	int overflowsCount =(u32)((Delay / maxDelay));
+	u32 overflowsCount =(u32)((Delay / maxDelay));
 	u8 timerInitValue;
 	if (overflowsCount > 1)
 	{
@@ -139,16 +149,19 @@ EN_timerError_t timer_delay(u16 Delay)
 		timerInitValue = (u8)((maxDelay - Delay)/oneTickTime);
 	}
 	TCNT0 = timerInitValue;
+	
+   g_overflowsCount=overflowsCount;
+	
 
-	timer_start(TIMER0_SCALER_8);
+// 
+// 	while(overflowsCount--)
+// 	{
+// 		while((READ_BIT(TIFR, 0)) == 0);
+// 		
+// 		SET_BIT(TIFR, 0);
+// 	}
+// 
+// 	timer0_stop();
 
-
-	while(overflowsCount--)
-	{
-		while((READ_BIT(TIFR, 0)) == 0);
-		
-		SET_BIT(TIFR, 0);
-	}
-
-	TCCR0 &= ~((1 << CS01) | (1 << CS00));
 }
+

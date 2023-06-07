@@ -17,10 +17,10 @@ typedef enum EN_LED_ERROR_t
 	LED_ERROR
 }EN_LED_ERROR_t;
 
-	#define  LED1 0 
-	#define  LED2 1
-	#define  LED3 2 
-	#define  LED4 3 
+	#define  LED1 4 
+	#define  LED2 5
+	#define  LED3 6 
+	#define  LED4 7 
 	
 	#define LEDS_Port PB
 
@@ -32,5 +32,6 @@ void LED_on     (u8 LED_N);
 void LED_off    (u8 LED_N);
 void LED_toggel (u8 LED_N);
 
-
+void LEDS_blink( u8 ledS_PINS , u16 on_t, u16 off_t);
+void timer_flag();
 #endif /* LED_H_ */
