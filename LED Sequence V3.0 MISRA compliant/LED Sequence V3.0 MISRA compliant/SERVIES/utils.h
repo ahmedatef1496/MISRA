@@ -11,7 +11,7 @@
 
 
 
-#define F_CPU    8000000
+#define F_CPU    16000000
 #include <util/delay.h>
 
 #define  SET_BIT(reg,bit)     (reg=reg|(1<<bit))

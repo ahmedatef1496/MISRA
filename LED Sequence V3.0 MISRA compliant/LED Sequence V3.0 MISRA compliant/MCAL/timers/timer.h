@@ -16,9 +16,9 @@
 #define TIMR0_MAX_VALUE		256
 #define TIMR1_MAX_VALUE		256
 #define TIMR2_MAX_VALUE		256
-extern   u8 car_mode ;
-extern   s32 mode_ovf ;
-extern   u8 g_speed_flag;
+ 
+ #define TIMER0_SCALER       64
+
 
 
 /*================================================================================================================*/
@@ -109,12 +109,11 @@ typedef enum{
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////
 
 EN_timerError_t TIMER0_Init(Timer0Mode_type mode);
 EN_timerError_t timer_InitValue(u8 timerInitValue);
 EN_timerError_t timer_start(Timer0Scaler_type scaler);
-EN_timerError_t timer_delay(u16 Delay);
+EN_timerError_t TimerDelayAsych(u16 Delay);
 EN_timerError_t timer_reset();
 EN_timerError_t timer0_stop();
 void TIMER0_OV_InterruptEnable(void);

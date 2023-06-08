@@ -15,10 +15,10 @@
 #include "../MCAL/Interrupt/exi.h"
 
 
-typedef struct ST_BLINKING_t {
+typedef struct strBLINKINGCFG {
 	u16 ton;
 	u16 toff;
-}ST_BLINKING_t;
+}strBLINKINGCFG;
 
 void app_start_v1();
  void app_init(void);

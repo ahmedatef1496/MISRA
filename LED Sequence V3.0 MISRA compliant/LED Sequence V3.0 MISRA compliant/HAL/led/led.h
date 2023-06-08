@@ -33,5 +33,5 @@ void LED_off    (u8 LED_N);
 void LED_toggel (u8 LED_N);
 
 void LEDS_blink( u8 ledS_PINS , u16 on_t, u16 off_t);
-void timer_flag();
+void BlinkFlag();
 #endif /* LED_H_ */
