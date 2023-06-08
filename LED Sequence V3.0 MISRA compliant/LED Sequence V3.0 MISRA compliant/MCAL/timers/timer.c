@@ -21,7 +21,9 @@ static u32  g_overflowsCount  = 0;
 /**********************************************************/
 
 EN_timerError_t TIMER0_Init(Timer0Mode_type mode)
-{
+{ 
+	EN_timerError_t status=TIMER_OK ;	
+	
     switch (mode)
     {
     case TIMER0_NORMAL_MODE:
@@ -41,13 +43,16 @@ EN_timerError_t TIMER0_Init(Timer0Mode_type mode)
         SET_BIT(TCCR0,WGM01);
         break;
     default:
-        return INVALID_MODE;
+        status = INVALID_MODE;
+		break;
 
     }
+	return status;
 }
 
 EN_timerError_t timer_start(Timer0Scaler_type scaler)
-{
+{ 
+   EN_timerError_t status=TIMER_OK ;	
     switch (scaler)
     {
     case TIMER0_STOP:
@@ -60,11 +65,13 @@ EN_timerError_t timer_start(Timer0Scaler_type scaler)
     case EXTERNAL_RISING:
         TCCR0&=0XF8;//0b11111000
         TCCR0|=scaler;
-        return TIMER_OK;
+        status= TIMER_OK;
+		break;
 
     default:
-        return INVALID_PRESCALER;
+        status= INVALID_PRESCALER;
     }
+	return status;
 }
 
 EN_timerError_t timer_setTimerValue(u8 timerValue)

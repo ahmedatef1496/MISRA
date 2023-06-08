@@ -52,31 +52,37 @@ void set_blinking_t_mode (void)
     LEDSModeCheck();
     switch (gu8BlinkingTimeMode)
     {
-    case 1:
+    case 1:{
         gstrBLINKINGCFG.ton  = 100;
         gstrBLINKINGCFG.toff = 900;   
         break;
-    case 2:
+		   }
+    case 2:{
         gstrBLINKINGCFG.ton  = 200;
         gstrBLINKINGCFG.toff = 800; 
         break;
-    case 3:
+	       }
+    case 3:{
         gstrBLINKINGCFG.ton  = 300;
         gstrBLINKINGCFG.toff = 700;  
         break;
-    case 4:
+	       }
+    case 4:{
         gstrBLINKINGCFG.ton  = 500;
         gstrBLINKINGCFG.toff = 500;  
         break;
-    case 5:
+	       }
+    case 5:{
         gstrBLINKINGCFG.ton  = 800;
         gstrBLINKINGCFG.toff = 200;  
         break;
-    default:
+	       }
+    default:{
         gstrBLINKINGCFG.ton  = 100;
         gstrBLINKINGCFG.toff = 900;
         gu8BlinkingTimeMode=1 ;
         break;
+	        }
     }
 }
 
