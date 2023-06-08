@@ -1,5 +1,4 @@
 # LED Sequence V3.0 MISRA compliant
-#### MISRA
 
 # Proiect_map
 | File                  | Link                                                                           
@@ -11,7 +10,7 @@
 
 
 
-# MISRA Rules Applied in This PROJECT + TIMER Driver (using TIMER0) + DIO Driver
+## MISRA Rules Applied in This PROJECT + TIMER Driver (using TIMER0) + DIO Driver
 
  # Drivers
 -Rule 14.7, requires that functions with variable-length argument lists should not be called.<br>
