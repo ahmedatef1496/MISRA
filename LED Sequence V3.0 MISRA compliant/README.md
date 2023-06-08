@@ -7,7 +7,7 @@
 | MCU file                   | [.hex](https://github.com/ahmedatef1496/MISRA/blob/main/LED%20Sequence%20V3.0%20MISRA%20compliant/LED%20Sequence%20V3.0%20MISRA%20compliant/Debug/LED%20Sequence%20V3.0%20MISRA%20compliant.hex)  |
 | Simulation                    | [Simulation](https://github.com/ahmedatef1496/MISRA/tree/main/LED%20Sequence%20V3.0%20MISRA%20compliant/LED%20Sequence%20V3.0%20MISRA%20compliant/sim) |
 | HW_Test Video                 | [Video](https://youtu.be/LorM2qhaJbI)|
-|  Re-build Video                 | [Video uploading]()|
+| Re-build Video                 | [Video](https://github.com/ahmedatef1496/MISRA/blob/main/LED%20Sequence%20V3.0%20MISRA%20compliant/LED%20Sequence%20V3.0%20MISRA%20compliant/video.mp4)|
 
 
 
