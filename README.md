@@ -5,12 +5,6 @@
   <a href="">
     <img src="https://github.com/ahmedatef1496/Obstacle-avoidance-car-V1.0/blob/main/documentation/car.jpg" alt="Logo" width="800" height="400">
   </a>
-<h3 align="Obstacle-avoidance-car</h3>
-  <p align="center">
-    <a href="https://github.com/ahmedatef1496/Obstacle-avoidance-car-V1.0/blob/main/documentation/Obstacle%20Avoidance%20Robot%20V1.0%20Design%20-%20team2.pdf"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-  </p>
   </div>
   
 
